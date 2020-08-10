@@ -1,5 +1,12 @@
 # Storybook
 
+[![HitCount](http://hits.dwyl.com/felps03/https://githubcom/Felps03/storybook.svg)](http://hits.dwyl.com/felps03/https://githubcom/Felps03/storybook)
+[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/felps03)](https://www.linkedin.com/in/felps03/)
+[![HitCount](https://img.shields.io/github/languages/top/felps03/react-native-design-code.svg
+)
+
+
+
 ## Descrição do projeto
 
 Esté projeto consiste na demostração da utililização do storybook no Reack.
@@ -18,8 +25,21 @@ Esté projeto consiste na demostração da utililização do storybook no Reack.
 
 ```bash
 # Clone o repositório
-$ git clone https:...
+$ git clone https://github.com/Felps03/storybook
+
+# Entre na pasta
+$ cd storybook
+
+# Instale todas as dependências do projeto
+$ npm i
+
+# Se tudo correu bem, agora rodamos a aplicação 😆
+$ npm run storybook
 ```
+## Visualização do Projeto
+
+<img src="https://raw.githubusercontent.com/Felps03/storybook/master/tmp/storyboo.gif">
+
 
 ## Dependências e bibliotecas utilizadas
 
@@ -44,4 +64,6 @@ $ git clone https:...
 
 ## Desenvolvedor
 
- [<img src="https://avatars3.githubusercontent.com/u/12463786?s=460&u=b207ef729d05bef11262e4f11f26c11248284e46&v=4" width=115><br><sub>Felipe Santos</sub>](https://github.com/Felps03)# storybook
+- does it work? maybe. will I check? no.
+
+ [<img src="https://avatars3.githubusercontent.com/u/12463786?s=460&u=b207ef729d05bef11262e4f11f26c11248284e46&v=4" width=115><br><sub>Felipe Santos</sub>](https://www.linkedin.com/in/felps03/)
