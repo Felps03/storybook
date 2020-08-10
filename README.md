@@ -8,7 +8,7 @@
 
 ## Descrição do projeto
 
-Esté projeto consiste na demostração da utililização do storybook no Reack.
+Este é projeto consiste na demostração da utililização do storybook no Reack.
 
 ## Funcionalidade 
 
