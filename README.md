@@ -2,7 +2,8 @@
 
 [![HitCount](http://hits.dwyl.com/Felps03/https://githubcom/Felps03/storybook.svg)](http://hits.dwyl.com/Felps03/https://githubcom/Felps03/storybook)
 [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/felps03)](https://www.linkedin.com/in/felps03/)
-(https://img.shields.io/github/languages/top/felps03/react-native-design-code.svg)
+[![HitCount](https://img.shields.io/github/languages/top/felps03/react-native-design-code.svg
+)
 
 
 
