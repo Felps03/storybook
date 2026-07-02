@@ -2,54 +2,34 @@
   "name": "mystorybook",
   "version": "0.1.0",
   "description": "Exemplo em react o storybook",
+  "type": "module",
   "keywords": [
     "storybook",
     "react",
     "nodejs"
-],
+  ],
   "author": {
     "name": "Felipe Santos | Felps",
     "email" : "felpsdev03@gmail.com", 
     "url": "https://www.linkedin.com/in/felps03/"
   },
+  "engines": {
+    "node": ">=24.0.0"
+  },
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "prop-types": "^15.8.1",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "storybook": "storybook dev -p 9009",
+    "build-storybook": "storybook build"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^5.3.19",
-    "@storybook/addon-knobs": "^5.3.19",
-    "@storybook/addon-links": "^5.3.19",
-    "@storybook/addon-notes": "^5.3.19",
-    "@storybook/addons": "^5.3.19",
-    "@storybook/preset-create-react-app": "^3.1.4",
-    "@storybook/react": "^5.3.19"
+    "@storybook/addon-docs": "^10.4.6",
+    "@storybook/react-vite": "^10.4.6",
+    "@vitejs/plugin-react": "^6.0.3",
+    "storybook": "^10.4.6",
+    "vite": "^8.1.3"
   }
 }

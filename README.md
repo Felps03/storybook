@@ -1,25 +1,34 @@
 # Storybook
 
 [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/felps03)](https://www.linkedin.com/in/felps03/)
-![HitCount](https://img.shields.io/github/languages/top/felps03/react-native-design-code.svg)
-
-
 
 ## Descrição do projeto
 
-Este é projeto consiste na demostração da utililização do storybook no Reack.
+Este projeto é uma POC (prova de conceito) de utilização do [Storybook](https://storybook.js.org/) com React, criada para demonstrar componentização e desenvolvimento isolado de UI.
 
-## Funcionalidade 
+## Objetivo
 
-✅ Componentização do Botão
+Servir como exemplo mínimo e didático de como estruturar componentes React documentados no Storybook — sem a complexidade de uma aplicação completa.
+
+## Funcionalidade
+
+✅ Componentização do `Button`, com variações de cor e estado, documentadas via Storybook.
+
+## Stack utilizada
+
+- [React 19](https://react.dev/)
+- [Storybook 10](https://storybook.js.org/) com o framework [`@storybook/react-vite`](https://storybook.js.org/docs/get-started/frameworks/react-vite)
+- [Vite](https://vite.dev/) como bundler
+- JavaScript (sem TypeScript)
+
+> Este projeto não tem mais uma aplicação React "standalone" (o `create-react-app` original foi removido) — ele existe apenas para rodar o Storybook e documentar componentes.
 
 ## Pré-requisitos
 
-❗ [Node](https://nodejs.org/en/download/)
+- [Node.js 24 (LTS)](https://nodejs.org/en/download/) — versão fixada em [`.nvmrc`](./.nvmrc). Se você usa [nvm](https://github.com/nvm-sh/nvm), rode `nvm use` na raiz do projeto.
+- npm (instalado junto com o Node)
 
-## Como rodar a aplicação
-
-### Instalando o projeto
+## Como instalar
 
 ```bash
 # Clone o repositório
@@ -28,40 +37,97 @@ $ git clone https://github.com/Felps03/storybook
 # Entre na pasta
 $ cd storybook
 
-# Instale todas as dependências do projeto
-$ npm i
+# Use a versão de Node recomendada (opcional, requer nvm)
+$ nvm use
 
-# Se tudo correu bem, agora rodamos a aplicação 😆
+# Instale as dependências
+$ npm install
+```
+
+## Como rodar o Storybook
+
+```bash
 $ npm run storybook
 ```
-## Visualização do Projeto
 
-<img src="https://raw.githubusercontent.com/Felps03/storybook/master/tmp/storyboo.gif">
+O Storybook sobe em `http://localhost:9009`.
 
+## Como gerar o build do Storybook
 
-## Dependências e bibliotecas utilizadas
+```bash
+$ npm run build-storybook
+```
 
-### Dependências
+O resultado é gerado na pasta `storybook-static/`, pronta para ser publicada como site estático.
 
-- [@testing-library/jest-dom](https://www.npmjs.com/package/@testing-library/jest-dom) - A biblioteca fornece um conjunto de combinadores de jest personalizados que você pode usar para estender o jest. Isso tornará seus testes mais declarativos, claros para ler e manter.
-- [@testing-library/react](https://www.npmjs.com/package/@testing-library/react) - Ele fornece funções de utilidade leve em cima de react-dom e react-dom / test-utils.
-- [@testing-library/user-event](https://www.npmjs.com/package/@testing-library/user-event) - user-event tenta simular os eventos reais que aconteceriam no navegador conforme o usuário interage com ele.
-- [react](https://www.npmjs.com/package/react) - React é uma biblioteca JavaScript para criar interfaces de usuário.
-- [react-dom](https://www.npmjs.com/package/react-dom) - Este pacote serve como ponto de entrada para os renderizadores de servidor e DOM para React. Destina-se a ser emparelhado com o pacote React genérico, que é enviado como react to npm.
-- [react-scripts](https://www.npmjs.com/package/react-scripts) - Este pacote inclui scripts e configurações usados pelo aplicativo Create React.
+## Estrutura de pastas
 
-### Dependências de Desenvolvimento
+```
+.
+├── .storybook/          # Configuração do Storybook (main.js, preview.js)
+├── src/
+│   └── components/
+│       └── Button/       # Um componente por pasta
+│           ├── index.js          # Implementação do componente
+│           ├── index.stories.js  # Stories do componente
+│           └── styles.css        # Estilos do componente
+├── vite.config.js       # Configuração do Vite (builder usado pelo Storybook)
+└── package.json
+```
 
-- [@storybook/addon-actions](https://www.npmjs.com/package/@storybook/addon-actions) - Podem ser usadas para exibir dados recebidos por manipuladores de eventos no livro de histórias.
-- [@storybook/addon-knobs](https://www.npmjs.com/package/@storybook/addon-knobs) - Os botões adicionais do Storybook permitem que você edite adereços dinamicamente usando a UI do Storybook. Você também pode usar Knobs como uma variável dinâmica dentro de histórias no Storybook.
-- [@storybook/addon-links](https://www.npmjs.com/package/@storybook/addon-links) - O complemento Storybook Links pode ser usado para criar links que navegam entre histórias no Storybook.
-- [@storybook/addon-notes](https://www.npmjs.com/package/@storybook/addon-notes) - Storybook Addon Notes permite que você escreva notas (texto ou HTML) para suas histórias no Storybook.
-- [@storybook/addons](https://www.npmjs.com/package/@storybook/addons) - O Storybook Addons é um módulo de nó que é usado para carregar addons personalizados para o storybook. Ele armazena carregadores adicionais, canal de comunicação e outros recursos que podem ser usados por implementações de contos de fadas quando necessário.
-- [@storybook/preset-create-react-app](https://www.npmjs.com/package/@storybook/preset-create-react-app) - Configuração do aplicativo Criar React de uma linha para Storybook.
-- [@storybook/react](https://www.npmjs.com/package/@storybook/react) - Storybook for React é um ambiente de desenvolvimento de IU para seus componentes React. Com ele, você pode visualizar diferentes estados de seus componentes de IU e desenvolvê-los interativamente.
+## Como criar um novo componente
+
+1. Crie uma pasta em `src/components/<NomeDoComponente>/`.
+2. Adicione `index.js` com a implementação e `PropTypes` para validar as props.
+3. Se precisar de estilos, adicione um `styles.css` e importe no componente.
+4. Crie a story correspondente (veja a seção abaixo).
+
+## Como criar uma nova story
+
+Crie um arquivo `index.stories.js` dentro da pasta do componente, seguindo o padrão CSF3:
+
+```javascript
+import MeuComponente from '.';
+
+export default {
+  title: 'Components/MeuComponente',
+  component: MeuComponente,
+  tags: ['autodocs'],
+  args: {
+    // props padrão usadas em todas as stories
+  },
+};
+
+export const Default = {};
+
+export const OutraVariacao = {
+  args: {
+    // props específicas dessa variação
+  },
+};
+```
+
+A tag `autodocs` gera a documentação do componente automaticamente a partir do próprio código — comentários acima do componente e de cada prop em `PropTypes` aparecem na aba "Docs" do Storybook (veja o exemplo em `src/components/Button/index.js`).
+
+## O que foi modernizado
+
+Este projeto era originalmente uma POC de 2020, criada com `create-react-app` e Storybook 5. A modernização envolveu:
+
+- Node.js atualizado para a versão 24 (LTS).
+- Storybook atualizado de 5.3.19 para 10.4.6 (reconfigurado do zero com `@storybook/react-vite`, em vez de migração incremental major a major, já que o preset antigo `@storybook/preset-create-react-app` não existe mais nas versões atuais).
+- React e ReactDOM atualizados de 16 para 19.
+- `create-react-app`/`react-scripts` removido (projeto descontinuado pela equipe do React) — o projeto passou a existir só para rodar o Storybook, sem uma aplicação standalone.
+- Addons descontinuados removidos: `addon-knobs` (substituído por `args`/`argTypes`/Controls), `addon-notes` (substituído por `autodocs`), `addon-actions` e `addons` (funcionalidades incorporadas ao core do Storybook).
+- Story do `Button` reescrita em CSF3, com variações `Default`, `Error` e `Disabled`.
+- `prop-types` adicionado como dependência explícita (antes era usado no código, mas não estava declarado no `package.json`).
+- Configurações obsoletas removidas: `browserslist` (não é mais lido por nenhuma ferramenta do projeto), `eslintConfig` (dependia do `react-scripts`), lockfile duplicado (`yarn.lock` removido, `npm` como gerenciador único).
+
+## Possíveis próximos passos
+
+- Adicionar ESLint (flat config) e um script `lint`, caso o projeto cresça e passe a ter múltiplos colaboradores.
+- Adicionar testes de componente (ex.: Vitest + Testing Library) se a POC evoluir para algo com mais lógica.
+- Adicionar mais componentes ao design system, seguindo o mesmo padrão de pasta usado pelo `Button`.
 
 ## Desenvolvedor
 
-- does it work? maybe. will I check? no.
-
- [<img src="https://avatars3.githubusercontent.com/u/12463786?s=460&u=b207ef729d05bef11262e4f11f26c11248284e46&v=4" width=115><br><sub>Felipe Santos</sub>](https://www.linkedin.com/in/felps03/)
+[<img src="https://avatars3.githubusercontent.com/u/12463786?s=460&u=b207ef729d05bef11262e4f11f26c11248284e46&v=4" width=115><br><sub>Felipe Santos</sub>](https://www.linkedin.com/in/felps03/)
