@@ -52,6 +52,10 @@ $ npm run storybook
 
 O Storybook sobe em `http://localhost:9009`.
 
+## Visualização do projeto
+
+<img src="https://raw.githubusercontent.com/Felps03/storybook/master/tmp/storyboo.gif">
+
 ## Como gerar o build do Storybook
 
 ```bash
