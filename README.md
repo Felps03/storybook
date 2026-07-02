@@ -1,18 +1,14 @@
 # Storybook
 
-[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/felps03)](https://www.linkedin.com/in/felps03/)
+[![Website Badge](https://img.shields.io/badge/-felpsdev.com.br-000000?style=flat-square&logo=googlechrome&logoColor=white)](https://felpsdev.com.br/)
 
-## Descrição do projeto
+## Sobre o projeto
 
-Este projeto é uma POC (prova de conceito) de utilização do [Storybook](https://storybook.js.org/) com React, criada para demonstrar componentização e desenvolvimento isolado de UI.
-
-## Objetivo
-
-Servir como exemplo mínimo e didático de como estruturar componentes React documentados no Storybook — sem a complexidade de uma aplicação completa.
+Este projeto é uma POC (prova de conceito) de utilização do [Storybook](https://storybook.js.org/) com React, criada para demonstrar componentização e desenvolvimento isolado de UI — um exemplo mínimo e didático de como estruturar e documentar componentes React, sem a complexidade de uma aplicação completa.
 
 ## Funcionalidade
 
-✅ Componentização do `Button`, com variações de cor e estado, documentadas via Storybook.
+✅ Componentização do `Button`, com variações de cor, tamanho e estado, documentadas e testadas via Storybook.
 
 ## Stack utilizada
 
@@ -175,4 +171,4 @@ Este projeto era originalmente uma POC de 2020, criada com `create-react-app` e 
 
 ## Desenvolvedor
 
-[<img src="https://avatars3.githubusercontent.com/u/12463786?s=460&u=b207ef729d05bef11262e4f11f26c11248284e46&v=4" width=115><br><sub>Felipe Santos</sub>](https://www.linkedin.com/in/felps03/)
+[<img src="https://avatars3.githubusercontent.com/u/12463786?s=460&u=b207ef729d05bef11262e4f11f26c11248284e46&v=4" width=115><br><sub>Felipe Santos</sub>](https://felpsdev.com.br/)
